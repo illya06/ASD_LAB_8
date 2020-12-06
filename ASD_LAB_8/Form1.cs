@@ -31,44 +31,21 @@ namespace ASD_LAB_8
             log.Text += "\n";
         }
 
-        private void generate_Click(object sender, EventArgs e)
-        {
-            Random rand_ = new Random();
-            int n = Convert.ToInt32(size.Text);
-            if (rand.Checked)
-            {
-                for (int i = 0; i < n; i++)
-                {
-                    list.Add(rand_.Next(10, 20));
-                }
-            }
-            else if (lin.Checked)
-            {
-                if(n >= 10)
-                for(int i = 10; i <= n; i++)
-                {
-                    list.Add(i);
-                }
-            }
-            
-            
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            List<int> list_ = new List<int>();
             string positions = "";
             string logOut = "";
             int i = 0;
 
+            list.Clear();
 
-            for (int j = 10; j <= 20; j++)
+            for(int j = 10; j <= 20; j++)
             {
-                list_.Add(j);
+                list.Add(j);
             }
 
-            listToLog(list_);
-            foreach(int val in list_)
+            listToLog(list);
+            foreach(int val in list)
             {
                 logOut += $"\nChecked if {val}%10 == 3";
                 if (val % 10 == 3)
@@ -88,7 +65,64 @@ namespace ASD_LAB_8
 
         private void tableSart_Click(object sender, EventArgs e)
         {
+            int[] n = { 10, 20, 200, 2000, 20000 };
+            int[,] output = new int[2,5];
+            int step = 0;
 
+            dataGridView1.Rows.Clear();
+
+            if (rand.Checked)
+                foreach (int val in n)
+                {
+                    Random rand_ = new Random();
+                    list.Clear();
+                    for(int i = 1; i <= val; i++)
+                    {
+                        list.Add(rand_.Next(1, val));
+                    }
+
+                    int amm = 0;
+                    int res = -1;
+
+                    foreach (int num in list)
+                    {
+                        amm++;
+                        if (num == Convert.ToInt32(seekVal.Text))
+                        {
+                            res = num;
+                            output[0, step] = res;
+                            output[1, step] = amm;
+                        }
+                    }
+
+                    step++;
+                }
+            else if (lin.Checked)
+                foreach (int val in n)
+                {
+                    list.Clear();
+                    for (int i = 1; i <= val; i++)
+                    {
+                        list.Add(i);
+                    }
+
+                    int amm = 0;
+                    int res = -1;
+                    foreach(int num in list)
+                    {
+                        amm++;
+                        if(num == Convert.ToInt32(seekVal.Text))
+                        {
+                            res = num;
+                            output[0, step] = res;
+                            output[1, step] = amm;
+                        }
+                    }
+                    step++;
+                }
+
+            for (int i = 0; i < 2; i++)
+                dataGridView1.Rows.Add(output[i, 0], output[i, 1], output[i, 2], output[i, 3], output[i, 4]);
         }
     }
 }

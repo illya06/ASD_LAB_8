@@ -29,13 +29,8 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.generatedOut = new System.Windows.Forms.RichTextBox();
-            this.generate = new System.Windows.Forms.Button();
-            this.size = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.seekVal = new System.Windows.Forms.TextBox();
             this.lin = new System.Windows.Forms.RadioButton();
             this.valTable = new System.Windows.Forms.Label();
             this.rand = new System.Windows.Forms.RadioButton();
@@ -57,7 +52,6 @@
             this.log = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
@@ -66,68 +60,18 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(1, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(406, 201);
+            this.tabControl1.Size = new System.Drawing.Size(406, 210);
             this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.generatedOut);
-            this.tabPage2.Controls.Add(this.generate);
-            this.tabPage2.Controls.Add(this.size);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(398, 175);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "GENERATE";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // generatedOut
-            // 
-            this.generatedOut.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.generatedOut.Location = new System.Drawing.Point(61, 103);
-            this.generatedOut.Name = "generatedOut";
-            this.generatedOut.Size = new System.Drawing.Size(250, 56);
-            this.generatedOut.TabIndex = 14;
-            this.generatedOut.Text = "";
-            // 
-            // generate
-            // 
-            this.generate.Location = new System.Drawing.Point(236, 20);
-            this.generate.Name = "generate";
-            this.generate.Size = new System.Drawing.Size(75, 62);
-            this.generate.TabIndex = 13;
-            this.generate.Text = "GENERATE";
-            this.generate.UseVisualStyleBackColor = true;
-            this.generate.Click += new System.EventHandler(this.generate_Click);
-            // 
-            // size
-            // 
-            this.size.Location = new System.Drawing.Point(144, 24);
-            this.size.Name = "size";
-            this.size.Size = new System.Drawing.Size(64, 20);
-            this.size.TabIndex = 10;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "ARRAY SIZE : ";
             // 
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.seekVal);
             this.tabPage1.Controls.Add(this.valTable);
             this.tabPage1.Controls.Add(this.tableSart);
             this.tabPage1.Controls.Add(this.label3);
@@ -137,17 +81,17 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(398, 175);
+            this.tabPage1.Size = new System.Drawing.Size(398, 184);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "TABLE";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // seekVal
             // 
-            this.textBox1.Location = new System.Drawing.Point(335, 109);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(37, 20);
-            this.textBox1.TabIndex = 6;
+            this.seekVal.Location = new System.Drawing.Point(324, 109);
+            this.seekVal.Name = "seekVal";
+            this.seekVal.Size = new System.Drawing.Size(48, 20);
+            this.seekVal.TabIndex = 6;
             // 
             // lin
             // 
@@ -184,7 +128,7 @@
             // 
             this.tableSart.Location = new System.Drawing.Point(150, 138);
             this.tableSart.Name = "tableSart";
-            this.tableSart.Size = new System.Drawing.Size(98, 22);
+            this.tableSart.Size = new System.Drawing.Size(98, 31);
             this.tableSart.TabIndex = 4;
             this.tableSart.Text = "START";
             this.tableSart.UseVisualStyleBackColor = true;
@@ -279,13 +223,14 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(398, 175);
+            this.tabPage3.Size = new System.Drawing.Size(398, 184);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "TASK";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // result
             // 
+            this.result.Enabled = false;
             this.result.Location = new System.Drawing.Point(265, 40);
             this.result.Name = "result";
             this.result.Size = new System.Drawing.Size(75, 20);
@@ -343,13 +288,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 207);
+            this.ClientSize = new System.Drawing.Size(406, 234);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -365,8 +308,7 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox seekVal;
         private System.Windows.Forms.Label valTable;
         private System.Windows.Forms.Button tableSart;
         private System.Windows.Forms.Label label3;
@@ -378,12 +320,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.RichTextBox generatedOut;
-        private System.Windows.Forms.Button generate;
         private System.Windows.Forms.RadioButton lin;
         private System.Windows.Forms.RadioButton rand;
-        private System.Windows.Forms.TextBox size;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox result;
         private System.Windows.Forms.Label label6;
