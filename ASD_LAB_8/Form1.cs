@@ -87,7 +87,7 @@ namespace ASD_LAB_8
                     foreach (int num in list)
                     {
                         amm++;
-                        if (num == Convert.ToInt32(seekVal.Text))
+                        if (num == val - Convert.ToInt32(seekVal.Text))
                         {
                             res = num;
                             output[0, step] = res;
@@ -111,7 +111,7 @@ namespace ASD_LAB_8
                     foreach(int num in list)
                     {
                         amm++;
-                        if(num == Convert.ToInt32(seekVal.Text))
+                        if(num == val - Convert.ToInt32(seekVal.Text))
                         {
                             res = num;
                             output[0, step] = res;
