@@ -29,35 +29,35 @@
         private void InitializeComponent()
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.generatedOut = new System.Windows.Forms.RichTextBox();
+            this.generate = new System.Windows.Forms.Button();
+            this.lin = new System.Windows.Forms.RadioButton();
+            this.rand = new System.Windows.Forms.RadioButton();
+            this.size = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.valTable = new System.Windows.Forms.Label();
+            this.tableSart = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tableSart = new System.Windows.Forms.Button();
-            this.valTable = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.size = new System.Windows.Forms.TextBox();
-            this.rand = new System.Windows.Forms.RadioButton();
-            this.lin = new System.Windows.Forms.RadioButton();
-            this.generate = new System.Windows.Forms.Button();
-            this.generatedOut = new System.Windows.Forms.RichTextBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.log = new System.Windows.Forms.RichTextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label6 = new System.Windows.Forms.Label();
             this.result = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.log = new System.Windows.Forms.RichTextBox();
             this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.SuspendLayout();
@@ -67,11 +67,84 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(88, 57);
+            this.tabControl1.Location = new System.Drawing.Point(1, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(406, 201);
             this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.generatedOut);
+            this.tabPage2.Controls.Add(this.generate);
+            this.tabPage2.Controls.Add(this.lin);
+            this.tabPage2.Controls.Add(this.rand);
+            this.tabPage2.Controls.Add(this.size);
+            this.tabPage2.Controls.Add(this.label4);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(398, 175);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "GENERATE";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // generatedOut
+            // 
+            this.generatedOut.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.generatedOut.Location = new System.Drawing.Point(61, 103);
+            this.generatedOut.Name = "generatedOut";
+            this.generatedOut.Size = new System.Drawing.Size(250, 56);
+            this.generatedOut.TabIndex = 14;
+            this.generatedOut.Text = "";
+            // 
+            // generate
+            // 
+            this.generate.Location = new System.Drawing.Point(236, 20);
+            this.generate.Name = "generate";
+            this.generate.Size = new System.Drawing.Size(75, 62);
+            this.generate.TabIndex = 13;
+            this.generate.Text = "GENERATE";
+            this.generate.UseVisualStyleBackColor = true;
+            this.generate.Click += new System.EventHandler(this.generate_Click);
+            // 
+            // lin
+            // 
+            this.lin.AutoSize = true;
+            this.lin.Location = new System.Drawing.Point(144, 65);
+            this.lin.Name = "lin";
+            this.lin.Size = new System.Drawing.Size(64, 17);
+            this.lin.TabIndex = 12;
+            this.lin.TabStop = true;
+            this.lin.Text = "LINEAR";
+            this.lin.UseVisualStyleBackColor = true;
+            // 
+            // rand
+            // 
+            this.rand.AutoSize = true;
+            this.rand.Location = new System.Drawing.Point(61, 65);
+            this.rand.Name = "rand";
+            this.rand.Size = new System.Drawing.Size(73, 17);
+            this.rand.TabIndex = 11;
+            this.rand.TabStop = true;
+            this.rand.Text = "RANDOM";
+            this.rand.UseVisualStyleBackColor = true;
+            // 
+            // size
+            // 
+            this.size.Location = new System.Drawing.Point(144, 24);
+            this.size.Name = "size";
+            this.size.Size = new System.Drawing.Size(64, 20);
+            this.size.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(58, 27);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(80, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "ARRAY SIZE : ";
             // 
             // tabPage1
             // 
@@ -90,21 +163,57 @@
             this.tabPage1.Text = "TABLE";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabPage2
+            // textBox1
             // 
-            this.tabPage2.Controls.Add(this.generatedOut);
-            this.tabPage2.Controls.Add(this.generate);
-            this.tabPage2.Controls.Add(this.lin);
-            this.tabPage2.Controls.Add(this.rand);
-            this.tabPage2.Controls.Add(this.size);
-            this.tabPage2.Controls.Add(this.label4);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(398, 175);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "GENERATE";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.textBox1.Location = new System.Drawing.Point(150, 129);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(87, 20);
+            this.textBox1.TabIndex = 6;
+            // 
+            // valTable
+            // 
+            this.valTable.AutoSize = true;
+            this.valTable.Location = new System.Drawing.Point(26, 132);
+            this.valTable.Name = "valTable";
+            this.valTable.Size = new System.Drawing.Size(107, 13);
+            this.valTable.TabIndex = 5;
+            this.valTable.Text = "SEEK FOR VALUE : ";
+            // 
+            // tableSart
+            // 
+            this.tableSart.Location = new System.Drawing.Point(284, 129);
+            this.tableSart.Name = "tableSart";
+            this.tableSart.Size = new System.Drawing.Size(88, 22);
+            this.tableSart.TabIndex = 4;
+            this.tableSart.Text = "START";
+            this.tableSart.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(26, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(77, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "COMPARED : ";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(26, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "RESULT : ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(26, 30);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "AMMOUNT";
             // 
             // dataGridView1
             // 
@@ -158,114 +267,6 @@
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(26, 30);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "AMMOUNT";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(26, 56);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "RESULT : ";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 80);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(77, 13);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "COMPARED : ";
-            // 
-            // tableSart
-            // 
-            this.tableSart.Location = new System.Drawing.Point(284, 129);
-            this.tableSart.Name = "tableSart";
-            this.tableSart.Size = new System.Drawing.Size(88, 22);
-            this.tableSart.TabIndex = 4;
-            this.tableSart.Text = "START";
-            this.tableSart.UseVisualStyleBackColor = true;
-            // 
-            // valTable
-            // 
-            this.valTable.AutoSize = true;
-            this.valTable.Location = new System.Drawing.Point(26, 132);
-            this.valTable.Name = "valTable";
-            this.valTable.Size = new System.Drawing.Size(107, 13);
-            this.valTable.TabIndex = 5;
-            this.valTable.Text = "SEEK FOR VALUE : ";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(150, 129);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 20);
-            this.textBox1.TabIndex = 6;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 27);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(80, 13);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "ARRAY SIZE : ";
-            // 
-            // size
-            // 
-            this.size.Location = new System.Drawing.Point(144, 24);
-            this.size.Name = "size";
-            this.size.Size = new System.Drawing.Size(64, 20);
-            this.size.TabIndex = 10;
-            // 
-            // rand
-            // 
-            this.rand.AutoSize = true;
-            this.rand.Location = new System.Drawing.Point(61, 65);
-            this.rand.Name = "rand";
-            this.rand.Size = new System.Drawing.Size(73, 17);
-            this.rand.TabIndex = 11;
-            this.rand.TabStop = true;
-            this.rand.Text = "RANDOM";
-            this.rand.UseVisualStyleBackColor = true;
-            // 
-            // lin
-            // 
-            this.lin.AutoSize = true;
-            this.lin.Location = new System.Drawing.Point(144, 65);
-            this.lin.Name = "lin";
-            this.lin.Size = new System.Drawing.Size(64, 17);
-            this.lin.TabIndex = 12;
-            this.lin.TabStop = true;
-            this.lin.Text = "LINEAR";
-            this.lin.UseVisualStyleBackColor = true;
-            // 
-            // generate
-            // 
-            this.generate.Location = new System.Drawing.Point(236, 20);
-            this.generate.Name = "generate";
-            this.generate.Size = new System.Drawing.Size(75, 62);
-            this.generate.TabIndex = 13;
-            this.generate.Text = "GENERATE";
-            this.generate.UseVisualStyleBackColor = true;
-            // 
-            // generatedOut
-            // 
-            this.generatedOut.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.generatedOut.Location = new System.Drawing.Point(61, 103);
-            this.generatedOut.Name = "generatedOut";
-            this.generatedOut.Size = new System.Drawing.Size(250, 56);
-            this.generatedOut.TabIndex = 14;
-            this.generatedOut.Text = "";
-            // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.result);
@@ -281,32 +282,12 @@
             this.tabPage3.Text = "TASK";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // log
+            // result
             // 
-            this.log.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.log.Location = new System.Drawing.Point(54, 102);
-            this.log.Name = "log";
-            this.log.Size = new System.Drawing.Size(286, 67);
-            this.log.TabIndex = 0;
-            this.log.Text = "";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(51, 86);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(38, 13);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "LOG : ";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(54, 30);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(103, 38);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "START TASK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.result.Location = new System.Drawing.Point(265, 40);
+            this.result.Name = "result";
+            this.result.Size = new System.Drawing.Size(75, 20);
+            this.result.TabIndex = 12;
             // 
             // label6
             // 
@@ -317,26 +298,46 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "RESULT : ";
             // 
-            // result
+            // button1
             // 
-            this.result.Location = new System.Drawing.Point(265, 40);
-            this.result.Name = "result";
-            this.result.Size = new System.Drawing.Size(75, 20);
-            this.result.TabIndex = 12;
+            this.button1.Location = new System.Drawing.Point(54, 30);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(103, 38);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "START TASK";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(51, 86);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(38, 13);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "LOG : ";
+            // 
+            // log
+            // 
+            this.log.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.log.Location = new System.Drawing.Point(54, 102);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(286, 67);
+            this.log.TabIndex = 0;
+            this.log.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 207);
             this.Controls.Add(this.tabControl1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();

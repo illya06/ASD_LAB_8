@@ -16,5 +16,32 @@ namespace ASD_LAB_8
         {
             InitializeComponent();
         }
+
+        //GLOBAL VARIABLES
+        List<int> list = new List<int>();
+        //__________________
+
+        private void generate_Click(object sender, EventArgs e)
+        {
+            Random rand_ = new Random();
+            int n = Convert.ToInt32(size.Text);
+            if (rand.Checked)
+            {
+                for (int i = 0; i < n; i++)
+                {
+                    list.Add(rand_.Next(10, 20));
+                }
+            }
+            else if (lin.Checked)
+            {
+                if(n >= 10)
+                for(int i = 10; i <= n; i++)
+                {
+                    list.Add(i);
+                }
+            }
+            
+            
+        }
     }
 }
