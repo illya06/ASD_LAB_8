@@ -32,13 +32,13 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.generatedOut = new System.Windows.Forms.RichTextBox();
             this.generate = new System.Windows.Forms.Button();
-            this.lin = new System.Windows.Forms.RadioButton();
-            this.rand = new System.Windows.Forms.RadioButton();
             this.size = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lin = new System.Windows.Forms.RadioButton();
             this.valTable = new System.Windows.Forms.Label();
+            this.rand = new System.Windows.Forms.RadioButton();
             this.tableSart = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -55,11 +55,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.log = new System.Windows.Forms.RichTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage3.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -77,8 +79,6 @@
             // 
             this.tabPage2.Controls.Add(this.generatedOut);
             this.tabPage2.Controls.Add(this.generate);
-            this.tabPage2.Controls.Add(this.lin);
-            this.tabPage2.Controls.Add(this.rand);
             this.tabPage2.Controls.Add(this.size);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
@@ -108,28 +108,6 @@
             this.generate.UseVisualStyleBackColor = true;
             this.generate.Click += new System.EventHandler(this.generate_Click);
             // 
-            // lin
-            // 
-            this.lin.AutoSize = true;
-            this.lin.Location = new System.Drawing.Point(144, 65);
-            this.lin.Name = "lin";
-            this.lin.Size = new System.Drawing.Size(64, 17);
-            this.lin.TabIndex = 12;
-            this.lin.TabStop = true;
-            this.lin.Text = "LINEAR";
-            this.lin.UseVisualStyleBackColor = true;
-            // 
-            // rand
-            // 
-            this.rand.AutoSize = true;
-            this.rand.Location = new System.Drawing.Point(61, 65);
-            this.rand.Name = "rand";
-            this.rand.Size = new System.Drawing.Size(73, 17);
-            this.rand.TabIndex = 11;
-            this.rand.TabStop = true;
-            this.rand.Text = "RANDOM";
-            this.rand.UseVisualStyleBackColor = true;
-            // 
             // size
             // 
             this.size.Location = new System.Drawing.Point(144, 24);
@@ -148,6 +126,7 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Controls.Add(this.textBox1);
             this.tabPage1.Controls.Add(this.valTable);
             this.tabPage1.Controls.Add(this.tableSart);
@@ -165,28 +144,51 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(150, 129);
+            this.textBox1.Location = new System.Drawing.Point(335, 109);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(87, 20);
+            this.textBox1.Size = new System.Drawing.Size(37, 20);
             this.textBox1.TabIndex = 6;
+            // 
+            // lin
+            // 
+            this.lin.AutoSize = true;
+            this.lin.Location = new System.Drawing.Point(89, 13);
+            this.lin.Name = "lin";
+            this.lin.Size = new System.Drawing.Size(64, 17);
+            this.lin.TabIndex = 12;
+            this.lin.TabStop = true;
+            this.lin.Text = "LINEAR";
+            this.lin.UseVisualStyleBackColor = true;
             // 
             // valTable
             // 
             this.valTable.AutoSize = true;
-            this.valTable.Location = new System.Drawing.Point(26, 132);
+            this.valTable.Location = new System.Drawing.Point(211, 112);
             this.valTable.Name = "valTable";
             this.valTable.Size = new System.Drawing.Size(107, 13);
             this.valTable.TabIndex = 5;
             this.valTable.Text = "SEEK FOR VALUE : ";
             // 
+            // rand
+            // 
+            this.rand.AutoSize = true;
+            this.rand.Location = new System.Drawing.Point(6, 13);
+            this.rand.Name = "rand";
+            this.rand.Size = new System.Drawing.Size(73, 17);
+            this.rand.TabIndex = 11;
+            this.rand.TabStop = true;
+            this.rand.Text = "RANDOM";
+            this.rand.UseVisualStyleBackColor = true;
+            // 
             // tableSart
             // 
-            this.tableSart.Location = new System.Drawing.Point(284, 129);
+            this.tableSart.Location = new System.Drawing.Point(150, 138);
             this.tableSart.Name = "tableSart";
-            this.tableSart.Size = new System.Drawing.Size(88, 22);
+            this.tableSart.Size = new System.Drawing.Size(98, 22);
             this.tableSart.TabIndex = 4;
             this.tableSart.Text = "START";
             this.tableSart.UseVisualStyleBackColor = true;
+            this.tableSart.Click += new System.EventHandler(this.tableSart_Click);
             // 
             // label3
             // 
@@ -230,11 +232,11 @@
             this.Column3,
             this.Column4,
             this.Column5});
-            this.dataGridView1.Location = new System.Drawing.Point(150, 24);
+            this.dataGridView1.Location = new System.Drawing.Point(118, 24);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(222, 69);
+            this.dataGridView1.Size = new System.Drawing.Size(254, 69);
             this.dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -306,6 +308,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "START TASK";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label5
             // 
@@ -325,6 +328,17 @@
             this.log.TabIndex = 0;
             this.log.Text = "";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lin);
+            this.groupBox1.Controls.Add(this.rand);
+            this.groupBox1.Location = new System.Drawing.Point(29, 99);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(158, 33);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "array type : ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,6 +355,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -374,6 +390,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.RichTextBox log;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

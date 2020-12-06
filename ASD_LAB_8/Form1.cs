@@ -21,6 +21,16 @@ namespace ASD_LAB_8
         List<int> list = new List<int>();
         //__________________
 
+        void listToLog(List<int> list_)
+        {
+            log.Text = "\nList content : \n";
+            foreach(int var in list_)
+            {
+                log.Text += $" {var} ";
+            }
+            log.Text += "\n";
+        }
+
         private void generate_Click(object sender, EventArgs e)
         {
             Random rand_ = new Random();
@@ -42,6 +52,43 @@ namespace ASD_LAB_8
             }
             
             
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List<int> list_ = new List<int>();
+            string positions = "";
+            string logOut = "";
+            int i = 0;
+
+
+            for (int j = 10; j <= 20; j++)
+            {
+                list_.Add(j);
+            }
+
+            listToLog(list_);
+            foreach(int val in list_)
+            {
+                logOut += $"\nChecked if {val}%10 == 3";
+                if (val % 10 == 3)
+                {
+                    logOut += " (true)";
+                    positions += $"id({i})  ";
+                }
+                else
+                {
+                    logOut += " (false)";
+                }
+                i++;
+            }
+            result.Text = positions;
+            log.Text += logOut;
+        }
+
+        private void tableSart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
